@@ -1,7 +1,18 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
+import { Stay, stays, staysSubscribe } from '$lib/stays';
+import { supabase } from '$lib/supabase';
+import { onMount } from 'svelte';
 	import '../app.css';
 	import "../styles/tailwind-output.css";
+
+	onMount(async () => {
+		const { data, error } = await supabase.from('stays').select().is('endDate', null);
+		
+		stays.update(s => data as Stay[]);
+		staysSubscribe.subscribe();
+	});
+
 </script>
 
 <Header />

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
+	import { user } from '$lib/supabase';
+	
 </script>
 
 <header>
@@ -13,7 +15,10 @@
 	<nav>
 		<ul>
 			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
+			{#if $user}
+				<li class:active={$page.path === '/presence'}><a sveltekit:prefetch href="/presence">Lab Presence</a></li>
+			{/if}
+			<li class:active={$page.path === '/login'}><a sveltekit:prefetch href="/login">Login</a></li>
 		</ul>
 	</nav>
 
