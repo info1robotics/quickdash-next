@@ -12,6 +12,7 @@
     "build": "npm run tailwind:build && npm run build:only"
   },
   "devDependencies": {
+    "@sveltejs/adapter-node": "^1.0.0-next.55",
     "@sveltejs/kit": "next",
     "@types/cookie": "^0.4.1",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
