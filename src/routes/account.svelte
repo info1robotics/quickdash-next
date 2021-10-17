@@ -35,7 +35,6 @@
 </script>
 
 <div class="flex justify-center">
-
     {#if $user}
         <button class="bg-blue-600 hover:bg-blue-500 text-white font-bold rounded py-2 px-4" on:click={handleSignOut}>Sign out</button>
     {:else}

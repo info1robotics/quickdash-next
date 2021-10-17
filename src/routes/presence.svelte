@@ -46,13 +46,13 @@
 				{/if}
 
 			<p class="text-center">Currently in Lab</p>
-			{#each $stays as stay}
-				<h1>{stay?.id}</h1>
-				<h1>{stay?.user}</h1>
-				<h1>{stay?.startDate}</h1>
-				<h1>{stay?.endDate}</h1>
-				<h1> || </h1>
-			{/each}
+			<div class="container flex rounded-md shadow-md bg-white">
+				{#each $stays as stay}
+					<h1>{stay?.user}</h1>
+					<h1>{stay?.startDate}</h1>
+					<h1> || </h1>
+				{/each}
+			</div>
 
 		</div>
 	{/if}

@@ -18,7 +18,7 @@
 			{#if $user}
 				<li class:active={$page.path === '/presence'}><a sveltekit:prefetch href="/presence">Lab Presence</a></li>
 			{/if}
-			<li class:active={$page.path === '/login'}><a sveltekit:prefetch href="/login">Login</a></li>
+			<li class:active={$page.path === '/account'}><a sveltekit:prefetch href='/account'>Account</a></li>
 		</ul>
 	</nav>
 
