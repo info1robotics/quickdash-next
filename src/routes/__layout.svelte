@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
-import { Stay, stays, staysSubscribe } from '$lib/stays';
-import { supabase } from '$lib/supabase';
-import { onMount } from 'svelte';
+	import { Stay, stays, staysSubscribe } from '$lib/stays';
+	import { supabase } from '$lib/supabase';
+	import { onMount } from 'svelte';
 	import '../app.css';
 	import "../styles/tailwind-output.css";
 
