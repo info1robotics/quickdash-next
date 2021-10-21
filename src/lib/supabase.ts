@@ -8,6 +8,10 @@ export const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKe
 
 export const user = writable(supabase.auth.user());
 
+
 supabase.auth.onAuthStateChange((_, session) => {
     user.set(session?.user?? null);
 });
+
+export const access_token = writable("");
+
