@@ -20,8 +20,6 @@ import { onMount } from "svelte";
 
 	let password = "";
 	async function resetPassword() {
-		history.pushState({}, "", "/");
-		history.go(0);
 		
 		if(password.length === 0) return;
 		
@@ -34,6 +32,9 @@ import { onMount } from "svelte";
 				}
 			})
 		});
+		
+		history.pushState({}, "", "/");
+		history.go(0);
 
 
 	}
