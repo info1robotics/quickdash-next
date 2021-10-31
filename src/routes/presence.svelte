@@ -45,7 +45,7 @@
 					<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" on:click={checkIn}>Check In</button>
 				{/if}
 
-			<p class="text-center">Currently in Lab</p>
+			<p class="text-center text-2xl mt-3">People Currently in Lab:</p>
 			<div class="container flex rounded-md shadow-md bg-white">
 				{#each $stays as stay}
 					<h1>{stay?.user}</h1>

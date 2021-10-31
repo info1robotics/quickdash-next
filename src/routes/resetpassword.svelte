@@ -20,6 +20,9 @@ import { onMount } from "svelte";
 
 	let password = "";
 	async function resetPassword() {
+		history.pushState({}, "", "/");
+		history.go(0);
+		
 		if(password.length === 0) return;
 		
 		const response = await fetch('/api/resetpassword', {
@@ -38,5 +41,5 @@ import { onMount } from "svelte";
 
 <h1>Reset your Password</h1>
 <input type="password" bind:value={password} class="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"/>
-<button on:click={resetPassword}>Request</button>
+<button class="btn bg-green-400 p-3" on:click={resetPassword}>Request</button>
 
