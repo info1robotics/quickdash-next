@@ -32,10 +32,16 @@ import { onMount } from "svelte";
 				}
 			})
 		});
-		
-		history.pushState({}, "", "/");
-		history.go(0);
 
+		const bdy: any = await response.json();
+		console.log(bdy);
+
+		if(bdy.success) {
+			history.pushState({}, "", "/");
+			history.go(0);
+		} else {
+			alert(bdy.error);
+		}
 
 	}
 </script>
